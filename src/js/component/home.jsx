@@ -17,7 +17,7 @@ const Home = () => {
 				addTask(task)
 				setTask("");
 			}
-		};}
+		}}
 
 		const addTask = (newTask) => {
 			setToDoList([...toDoList, newTask]);
@@ -45,7 +45,7 @@ const Home = () => {
 			{listEmpty() && <p>No tasks, add a task</p>}
 			<ul>
 				{toDoList.map((element, index) => (
-					<li key={index}>{element}
+					<li key={index} className="taskItem">{element}
 					<i className="fas fa-trash" 
 					onClick={() => deleteTask(element)}
 					style={{ cursor: "pointer"}}
